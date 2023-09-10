@@ -45,6 +45,7 @@ class UserController {
   }
 
   //проверки как таковой тут нет, мы каждый запрос на auth генерируем новый токен и отправляем клиенту
+  // ИМХО каждый запрос генерировать новый токен это дороговато
   async check(req, res, next) {
     const token = generateJwt(req.user.id, req.user.email, req.user.role)
     return res.json({ token })

@@ -11,6 +11,7 @@ module.exports = function (req, res, next) {
     }
     const decoded = jwt.verify(token, process.env.SECRET_KEY)
     // если верификация прошла значит это тот самый токен что сервер ранее выдал и данные в нем корректны
+    // если не прошла выкинет ошибку
     //сохраняем в запрос объект с юзер id email role
     // эти данные нужно sanitize???
     req.user = decoded
