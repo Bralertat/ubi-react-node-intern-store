@@ -1,5 +1,5 @@
 // контроллеры это функции для роутеров
-const uuid = require('uuid')// генератор случайных имен-айишников
+const uuid = require('uuid')// генератор случайных имен-айдишников
 const path = require('path')// встроенный модуль Node.js адаптирует путь под любую операционку
 const { Device, DeviceInfo } = require('../models/models')
 const ApiError = require('../error/ApiError');

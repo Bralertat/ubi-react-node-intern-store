@@ -4,6 +4,7 @@ import App from './App'
 import UserStore from './store/UserStore';
 import DeviceStore from './store/DeviceStore';
 
+// mobx в отличие от redux пользуется встроенным рекатовским контекстом
 export const Context = createContext(null)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

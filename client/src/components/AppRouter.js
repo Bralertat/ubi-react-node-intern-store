@@ -5,8 +5,8 @@ import { useContext } from 'react'
 import { Context } from '..'
 
 const AppRouter = () => {
+  // вернется экземпляр класса UserStore созданный вверху в index.js
   const {user} = useContext(Context)
-  console.log(user)
   return (
     <Routes>
       {user.isAuth && authRoutes.map(({ path, Component }) =>

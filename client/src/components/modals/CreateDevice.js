@@ -17,14 +17,15 @@ const CreateDevice = observer(({ show, onHide }) => {
     fetchBrands().then(data => device.setBrands(data))
   }, [])
 
+  //создаем пустые инпуты // number используем как уникальный id
   const addInfo = () => {
     setInfo([...info, { title: '', description: '', number: Date.now() }])
   }
   const removeInfo = (number) => {
     setInfo(info.filter(i => i.number !== number))
   }
+  //при изменении инпута меняется и стейт
   const changeInfo = (key, value, number) => {
-    // что это за синтаксис [key]: value  и что оно делает непонял https://youtu.be/H2GCkRF9eko?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT&t=8940
     setInfo(info.map(i => i.number === number ? { ...i, [key]: value } : i))
   }
 

@@ -30,7 +30,8 @@ export const publicRoutes = [
     Component: Auth
   },
   {
-    path: DEVICE_ROUTE + '/:id', // как мы тут id просто строкой добавляем ???
+    //https://reactrouter.com/en/main/start/overview#dynamic-segments
+    path: DEVICE_ROUTE + '/:id', // как мы тут id просто строкой добавляем ??? двоеточие dynamic-segments
     Component: DevicePage
   }
 ]

@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 //замыкание если нам нужно закинуть данные кроме req, res, next
+//если role с аргумента функции не совпадет с прилетевшей от юзера, то выкинет ошибку
 module.exports = function(role) {
     return function (req, res, next) {
         if (req.method === "OPTIONS") {

@@ -1,5 +1,3 @@
-// а проверяется ли токен непонятно или просто расшифровывается ключом и если там мусор в payload ему все равно
-
 require('dotenv').config()
 const express = require('express');
 const sequelize = require('./db')// экземпляр нашей БД

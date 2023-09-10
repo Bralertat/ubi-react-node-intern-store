@@ -13,6 +13,7 @@ export default class UserStore {
   setUser(user) { this._user = user }
 
   //??? компьютед функции, вызываются только если переменная внутри была изменена что https://youtu.be/H2GCkRF9eko?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT&t=4897
+  //эти функции вызываются при изменении стора
   get isAuth() {
     return this._isAuth
   }

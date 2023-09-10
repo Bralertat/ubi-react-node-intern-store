@@ -24,7 +24,7 @@ const Auth = observer(() => {
       }
       console.log("data on click", data)
       console.log("user on click", user)
-      user.setUser(user)
+      user.setUser(data)// тут data наверное
       user.setIsAuth(true)
       navigate(SHOP_ROUTE)
     } catch (e) {

@@ -9,6 +9,7 @@ import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts"
 import { observer } from "mobx-react-lite";
 
 // он еще оборачивал в observer https://youtu.be/H2GCkRF9eko?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT&t=5300
+// чтобы при изменении стейта компнент перерендеривался
 const NavBar = observer(() => {
   const { user } = useContext(Context)
   const navigate = useNavigate()  // const history = useNavigate()
@@ -16,13 +17,15 @@ const NavBar = observer(() => {
   const logOut = () => {
     user.setUser({})
     user.setIsAuth(false)
+    localStorage.removeItem('token')
   }
 
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <NavLink style={{ color: 'white' }} to={SHOP_ROUTE}>КупиДевайс</NavLink>
-        {user.isAuth ?
+        <NavLink style={{ color: 'white', textDecoration: 'none' }} to={SHOP_ROUTE}>Stuff Store</NavLink>
+        {user.isAuth
+          ?
           <Nav className="ml-auto" style={{ color: 'white' }}>
             <Button
               variant={"outline-light"}
