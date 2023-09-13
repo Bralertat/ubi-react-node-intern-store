@@ -31,7 +31,7 @@ export const fetchDevices = async (typeId, brandId, page, limit = 5) => {
       typeId, brandId, page, limit
     }
   })
-  return data
+  return data //data type {count: 6, rows: Array of devices} rows это строки из таблиц sql
 }
 
 export const fetchOneDevice = async (id) => {

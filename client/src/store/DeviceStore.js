@@ -4,6 +4,7 @@ export default class DeviceStore {
   constructor() {
     this._types = []
     this._brands = []
+    // девайсы подгружаем/удаляем остаются только те что показываются на странице
     this._devices = []
     this._selectedType = {}
     this._selectedBrand = {}

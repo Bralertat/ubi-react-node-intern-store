@@ -41,7 +41,7 @@ class DeviceController {
     page = page || 1
     limit = limit || 9
     let offset = page * limit - limit // отступ сколько пропустить
-    let devices;
+    let devices
     if (!brandId && !typeId) {
       //findAndCountAll возвращает на фронт count: всего сколько таких товаров соответствующих фильтрам
       devices = await Device.findAndCountAll({ limit, offset })
